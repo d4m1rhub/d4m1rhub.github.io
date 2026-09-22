@@ -1,242 +1,160 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>❖ D4M1R_HUB ❖</title>
-    <style>
-        :root {
-            --bg-color: #0a0a0c;
-            --panel-color: #121216;
-            --accent-color: #00ff66;
-            --accent-glow: rgba(0, 255, 102, 0.3);
-            --text-color: #e2e8f0;
-            --text-muted: #64748b;
-        }
+    
+    <!-- GOOGLE SEO PREPARATION -->
+    <title>❖ D4M1R_HUB ❖ | Official Discord</title>
+    <meta name="description" content="Welcome to the official ❖ D4M1R_HUB ❖ by d4m1rhub. Get the best free, keyless Roblox scripts and ultimate game modifications. Join now!">
+    <meta name="keywords" content="d4m1rhub, d4m1r hub, d4m1rhub.github.io, roblox scripts, keyless scripts, free exploits, discord">
+    <meta name="robots" content="index, follow">
 
+    <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            overflow-x: hidden;
+            background-color: #060606;
+            color: #ffffff;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
         }
 
-        .matrix-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            opacity: 0.03;
-            background: linear-gradient(0deg, rgba(0, 255, 102, 0.1) 1px, transparent 1px),
-                        linear-gradient(90deg, rgba(0, 255, 102, 0.1) 1px, transparent 1px);
-            background-size: 20px 20px;
+        /* Tech-Grid Background */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: linear-gradient(rgba(0, 255, 100, 0.02) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(0, 255, 100, 0.02) 1px, transparent 1px);
+            background-size: 25px 25px;
+            z-index: 1;
         }
 
-        header {
+        .container {
             text-align: center;
-            padding: 60px 20px 40px 20px;
-        }
-
-        .logo {
-            font-size: 2.5rem;
-            font-weight: 800;
-            letter-spacing: 2px;
-            color: #fff;
-            text-shadow: 0 0 20px var(--accent-glow);
-            margin-bottom: 10px;
-        }
-
-        .logo span {
-            color: var(--accent-color);
-        }
-
-        .subtitle {
-            color: var(--text-muted);
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-        }
-
-        main {
-            max-width: 800px;
-            width: 100%;
-            margin: 0 auto;
-            padding: 0 20px 60px 20px;
-            flex: 1;
-        }
-
-        .card {
-            background-color: var(--panel-color);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
+            z-index: 2;
             padding: 30px;
+            background: rgba(10, 10, 10, 0.85);
+            border: 1px solid rgba(0, 255, 100, 0.3);
+            border-radius: 16px;
+            box-shadow: 0 0 40px rgba(0, 255, 100, 0.1);
+            max-width: 450px;
+            width: 90%;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Owner Profile Section */
+        .profile-section {
             margin-bottom: 25px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            transition: border 0.3s ease;
         }
 
-        .card:hover {
-            border-color: rgba(0, 255, 102, 0.3);
-        }
-
-        .card-title {
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #fff;
-        }
-
-        .card-title::before {
-            content: '';
-            display: inline-block;
-            width: 8px;
-            height: 8px;
-            background-color: var(--accent-color);
+        .avatar-placeholder {
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
-            box-shadow: 0 0 8px var(--accent-color);
-        }
-
-        .status-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-        }
-
-        @media (max-width: 600px) {
-            .status-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .status-item {
-            background: rgba(255, 255, 255, 0.02);
-            padding: 15px;
-            border-radius: 8px;
+            background: linear-gradient(135deg, #00ff64, #00aa44);
+            margin: 0 auto 15px auto;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            border-left: 3px solid #334155;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #000000;
+            box-shadow: 0 0 20px rgba(0, 255, 100, 0.4);
+            border: 2px solid #00ff64;
         }
 
-        .status-name {
-            font-weight: 500;
-        }
-
-        .status-badge {
+        .owner-title {
             font-size: 0.8rem;
-            font-weight: 700;
-            padding: 4px 10px;
-            border-radius: 4px;
             text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #555555;
+            margin-bottom: 2px;
         }
 
-        .status-online {
-            background-color: rgba(0, 255, 102, 0.1);
-            color: var(--accent-color);
-            border: 1px solid rgba(0, 255, 102, 0.2);
+        .owner-name {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #ffffff;
+            letter-spacing: 1px;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
         }
 
-        .btn {
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 100, 0.4), transparent);
+            margin: 20px 0;
+        }
+
+        /* Server Section */
+        h1 {
+            font-size: 2.2rem;
+            color: #00ff64;
+            text-shadow: 0 0 15px rgba(0, 255, 100, 0.6);
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+        }
+
+        .server-desc {
+            color: #888888;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Buttons */
+        .btn-discord {
             display: block;
-            width: 100%;
-            background-color: var(--accent-color);
-            color: #000;
-            text-align: center;
-            padding: 16px;
-            border-radius: 8px;
-            font-weight: 700;
+            background: #00ff64;
+            color: #000000;
+            padding: 16px 20px;
             font-size: 1.1rem;
+            font-weight: bold;
             text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 255, 100, 0.3);
             transition: all 0.3s ease;
-            box-shadow: 0 4px 20px var(--accent-glow);
-            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
         }
 
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(0, 255, 102, 0.5);
-            background-color: #00e65c;
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: #fff;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: none;
-        }
-
-        .btn-secondary:hover {
-            background-color: rgba(255, 255, 255, 0.05);
-            border-color: rgba(255, 255, 255, 0.2);
-            box-shadow: none;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.02);
+        .btn-discord:hover {
+            background: #ffffff;
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+            transform: translateY(-3px);
         }
     </style>
 </head>
 <body>
 
-    <div class="matrix-bg"></div>
-
-    <header>
-        <div class="logo">❖ <span>D4M1R_HUB</span> ❖</div>
-        <div class="subtitle">Next-Gen Exploit Center</div>
-    </header>
-
-    <main>
-        <!-- Links / Action -->
-        <div class="card">
-            <div class="card-title">Quick Access</div>
-            <a href="https://discord.gg/DEIN-LINK" target="_blank" class="btn">⚡ JOIN DISCORD SERVER</a>
-            <a href="#downloads" class="btn btn-secondary">📥 Browse Exploits</a>
+    <div class="container">
+        <!-- OWNER INFO -->
+        <div class="profile-section">
+            <div class="avatar-placeholder">D</div>
+            <div class="owner-title">Website Owner</div>
+            <div class="owner-name">@d4m1rhub</div>
         </div>
 
-        <!-- Status Panel -->
-        <div class="card">
-            <div class="card-title">Live Exploit Status</div>
-            <div class="status-grid">
-                <div class="status-item" style="border-left-color: var(--accent-color);">
-                    <span class="status-name">Exploit Menu V1</span>
-                    <span class="status-badge status-online">Undetected</span>
-                </div>
-                <div class="status-item" style="border-left-color: var(--accent-color);">
-                    <span class="status-name">Game Tweak Tools</span>
-                    <span class="status-badge status-online">Undetected</span>
-                </div>
-                <div class="status-item" style="border-left-color: var(--accent-color);">
-                    <span class="status-name">Injector Bypass</span>
-                    <span class="status-badge status-online">Working</span>
-                </div>
-                <div class="status-item" style="border-left-color: var(--accent-color);">
-                    <span class="status-name">Scripts & Macros</span>
-                    <span class="status-badge status-online">Safe</span>
-                </div>
-            </div>
-        </div>
-    </main>
+        <div class="divider"></div>
 
-    <footer>
-        &copy; 2026 ❖ D4M1R_HUB ❖. All rights reserved. Built for raw performance.
-    </footer>
+        <!-- SERVER INFO -->
+        <h1>❖ D4M1R_HUB ❖</h1>
+        <p class="server-desc">The official community hub for the best free keyless Roblox scripts, elite game modifications, and much more.</p>
+        
+        <!-- HARDCODED DIRECT DISCORD INVITE LINK WITH ONCLICK FORCING -->
+        <a href="https://discord.gg/WHmG6xuz3U" onclick="window.location.href='https://discord.gg/WHmG6xuz3U'; return false;" target="_blank" class="btn-discord">Join Discord Server</a>
+    </div>
 
 </body>
 </html>
